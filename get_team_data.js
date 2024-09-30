@@ -44,7 +44,7 @@ const getTeamsData = async (data) => {
 $(document).ready(function(){
     $("button").click(function(){
         for (var i = 0; i < teams.length; ++i) {
-            $("p").append(teams[i] + ", ");
+            $("p").append(teams[i] + ', ' + teamsData[i].nickname + '<br>');
         }   
     });
 });
