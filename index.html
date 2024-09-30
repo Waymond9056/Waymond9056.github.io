@@ -1,15 +1,39 @@
-<html>
-    <h1>
-        hello.
-    </h1>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="get_team_data.js"></script>
-    <h3>
-        List of all teams at this event:
-    </h3>
-    <p>
-    </p>
-    <button>
-        get teams
-    </button>
+<!DOCTYPE html>
+<html lang = "en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> FRCdle </title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- verify that this works when pushed -->
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="get_team_data.js"></script>
+    </head>
+
+    <!-- Visible Part of Code (body) -->
+    <body>
+        <div class="title">
+            <h1> FRCdle </h1>
+            <img src="images/favicon.ico" style="width:100px">    
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="teamInput" placeholder="FRC Team">
+            <button onclick=""> Guess </button>
+        </div>
+
+        <table>
+            <th> Team Number </th>
+            <th> Team Name </th>
+            <th> Rookie Year </th>
+            <th> Blue Banners </th>
+            <th> Distance from GRITS </th>
+
+        </table>
+        <p>
+        </p>
+        
+    </body>
+    
 </html>
