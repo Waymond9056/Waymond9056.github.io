@@ -3,8 +3,8 @@ import { writeFileSync } from 'fs';
 let event = '2024gacar';
 let district = '2024pch';
 let isEvent = true; // true to get teams by event, false to sort teams by district
-let name;
 let url;
+let name;
 
 if (isEvent) {
     url = 'https://www.thebluealliance.com/api/v3/event/' + event + '/teams';
@@ -38,26 +38,26 @@ const getTeamsData = async (data) => {
         teamsData.push(new Object());
         teamsData[i] = {
             'team_number': teams[i],
-            'city': data.city,
-            // 'country': data.country,
             'nickname': data.nickname,
+            'city': data.city,
+            'state': data.state_prov,
+            // 'country': data.country,
             'rookie_year': data.rookie_year,
             'school_name': data.school_name
         }
     }
     return data;
-}
+};
 
 (async () => {
     await getData(url);
     console.log(teams);
 
     await getTeamsData(teams);
-    console.log(teamsData);   
+    console.log(teamsData);
 
     writeFileSync(
         '../data/' + name + '.json',
-        JSON.stringify({ teams: teamsData }, null, 2)
+        JSON.stringify(teamsData, null, 2)
     );
-
 })();
