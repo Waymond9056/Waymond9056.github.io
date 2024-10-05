@@ -1,0 +1,512 @@
+[
+  {
+    "team_number": 1102,
+    "nickname": "M'Aiken Magic",
+    "city": "Aiken",
+    "state": "South Carolina",
+    "rookie_year": 2003,
+    "school_name": "MAiken Magic STEM Foundation & Aiken High School",
+    "number_of_awards": 28,
+    "event_distance": "256 mi"
+  },
+  {
+    "team_number": 1261,
+    "nickname": "Robo Lions",
+    "city": "Suwanee",
+    "state": "Georgia",
+    "rookie_year": 2004,
+    "school_name": "Peachtree Ridge High School",
+    "number_of_awards": 46,
+    "event_distance": "103 mi"
+  },
+  {
+    "team_number": 1287,
+    "nickname": "Aluminum Assault",
+    "city": "Myrtle Beach",
+    "state": "South Carolina",
+    "rookie_year": 2004,
+    "school_name": "Academy of Arts Science & Tech",
+    "number_of_awards": 14,
+    "event_distance": "450 mi"
+  },
+  {
+    "team_number": 1311,
+    "nickname": "Kell Robotics",
+    "city": "Kennesaw",
+    "state": "Georgia",
+    "rookie_year": 2004,
+    "school_name": "Kell High School",
+    "number_of_awards": 39,
+    "event_distance": "67.3 mi"
+  },
+  {
+    "team_number": 1414,
+    "nickname": "IHOT",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "rookie_year": 2004,
+    "school_name": "Atlanta International School",
+    "number_of_awards": 34,
+    "event_distance": "83.1 mi"
+  },
+  {
+    "team_number": 1648,
+    "nickname": "G3 Robotics",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "rookie_year": 2005,
+    "school_name": "Midtown High School",
+    "number_of_awards": 32,
+    "event_distance": "85.9 mi"
+  },
+  {
+    "team_number": 1683,
+    "nickname": "Techno Titans",
+    "city": "Johns Creek",
+    "state": "Georgia",
+    "rookie_year": 2005,
+    "school_name": "Northview High School",
+    "number_of_awards": 37,
+    "event_distance": "97.8 mi"
+  },
+  {
+    "team_number": 1746,
+    "nickname": "FC - Team OTTO",
+    "city": "Cumming",
+    "state": "Georgia",
+    "rookie_year": 2006,
+    "school_name": "Forsyth Central High School",
+    "number_of_awards": 46,
+    "event_distance": "84.2 mi"
+  },
+  {
+    "team_number": 1758,
+    "nickname": "Technomancers",
+    "city": "Florence",
+    "state": "South Carolina",
+    "rookie_year": 2006,
+    "school_name": "Florence Career Center",
+    "number_of_awards": 8,
+    "event_distance": "380 mi"
+  },
+  {
+    "team_number": 1771,
+    "nickname": "North Gwinnett Robotics",
+    "city": "Suwanee",
+    "state": "Georgia",
+    "rookie_year": 2006,
+    "school_name": "Family/Community & North Gwinnett High School",
+    "number_of_awards": 43,
+    "event_distance": "107 mi"
+  },
+  {
+    "team_number": 2415,
+    "nickname": "WiredCats",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "rookie_year": 2008,
+    "school_name": "Westminster School",
+    "number_of_awards": 57,
+    "event_distance": "79.9 mi"
+  },
+  {
+    "team_number": 281,
+    "nickname": "The GreenVillains",
+    "city": "Greenville",
+    "state": "South Carolina",
+    "rookie_year": 1999,
+    "school_name": "Greenville Tech Charter HS & Green Charter Sch-Greenville & Sterling School & Mauldin High School & Eastside High School & Blue Ridge High School",
+    "number_of_awards": 41,
+    "event_distance": "220 mi"
+  },
+  {
+    "team_number": 2815,
+    "nickname": "Blue Devil Mechanics",
+    "city": "Columbia",
+    "state": "South Carolina",
+    "rookie_year": 2009,
+    "school_name": "Dreher High School",
+    "number_of_awards": 16,
+    "event_distance": "305 mi"
+  },
+  {
+    "team_number": 2974,
+    "nickname": "Walton Robotics",
+    "city": "Marietta",
+    "state": "Georgia",
+    "rookie_year": 2009,
+    "school_name": "Walton High School",
+    "number_of_awards": 72,
+    "event_distance": "75.2 mi"
+  },
+  {
+    "team_number": 3344,
+    "nickname": "Space Dragons",
+    "city": "Fayetteville",
+    "state": "Georgia",
+    "rookie_year": 2010,
+    "school_name": "Whitewater High School",
+    "number_of_awards": 5,
+    "event_distance": "117 mi"
+  },
+  {
+    "team_number": 342,
+    "nickname": "Burning Magnetos",
+    "city": "North Charleston",
+    "state": "South Carolina",
+    "rookie_year": 2000,
+    "school_name": "Fort Dorchester High",
+    "number_of_awards": 60,
+    "event_distance": "377 mi"
+  },
+  {
+    "team_number": 343,
+    "nickname": "Metal-In-Motion",
+    "city": "Seneca",
+    "state": "South Carolina",
+    "rookie_year": 2000,
+    "school_name": "Metal in Motion - FIRST Robotics Team 343 & TriCounty Technical College",
+    "number_of_awards": 64,
+    "event_distance": "189 mi"
+  },
+  {
+    "team_number": 3489,
+    "nickname": "Category 5",
+    "city": "Summerville",
+    "state": "South Carolina",
+    "rookie_year": 2011,
+    "school_name": "Family/Community & Home School",
+    "number_of_awards": 34,
+    "event_distance": "365 mi"
+  },
+  {
+    "team_number": 3490,
+    "nickname": "Viper Drive",
+    "city": "Summerville",
+    "state": "South Carolina",
+    "rookie_year": 2011,
+    "school_name": "Cane Bay High School",
+    "number_of_awards": 13,
+    "event_distance": "366 mi"
+  },
+  {
+    "team_number": 3635,
+    "nickname": "Flying Legion",
+    "city": "Warner Robins",
+    "state": "Georgia",
+    "rookie_year": 2011,
+    "school_name": "Houston Co Career Academy & Veterans High School & Warner Robins High School & Northside High School & Houston Co High School & Perry High School",
+    "number_of_awards": 11,
+    "event_distance": "190 mi"
+  },
+  {
+    "team_number": 3815,
+    "nickname": "NF Raiders",
+    "city": "Cumming",
+    "state": "Georgia",
+    "rookie_year": 2011,
+    "school_name": "North Forsyth High School",
+    "number_of_awards": 1,
+    "event_distance": "80.1 mi"
+  },
+  {
+    "team_number": 4112,
+    "nickname": "EagleBots",
+    "city": "Cumming ",
+    "state": "Georgia",
+    "rookie_year": 2012,
+    "school_name": "South Forsyth High School",
+    "number_of_awards": 17,
+    "event_distance": "104 mi"
+  },
+  {
+    "team_number": 4188,
+    "nickname": "Columbus Space Program",
+    "city": "Columbus",
+    "state": "Georgia",
+    "rookie_year": 2012,
+    "school_name": "Columbus High School",
+    "number_of_awards": 56,
+    "event_distance": "190 mi"
+  },
+  {
+    "team_number": 4189,
+    "nickname": "Chargers",
+    "city": "Jefferson",
+    "state": "Georgia",
+    "rookie_year": 2012,
+    "school_name": "Jefferson High School",
+    "number_of_awards": 19,
+    "event_distance": "135 mi"
+  },
+  {
+    "team_number": 4451,
+    "nickname": "ROBOTZ Garage",
+    "city": "Fountain Inn",
+    "state": "South Carolina",
+    "rookie_year": 2013,
+    "school_name": "Fountain Inn HS & Laurens District High School",
+    "number_of_awards": 41,
+    "event_distance": "225 mi"
+  },
+  {
+    "team_number": 4509,
+    "nickname": "Mechanical Bulls",
+    "city": "Sugar Hill",
+    "state": "Georgia",
+    "rookie_year": 2013,
+    "school_name": "Lanier High School",
+    "number_of_awards": 12,
+    "event_distance": "109 mi"
+  },
+  {
+    "team_number": 4516,
+    "nickname": "Hyperion",
+    "city": "Roswell",
+    "state": "Georgia",
+    "rookie_year": 2013,
+    "school_name": "Blessed Trinity Catholic HS",
+    "number_of_awards": 7,
+    "event_distance": "75.1 mi"
+  },
+  {
+    "team_number": 4533,
+    "nickname": "Phoenix",
+    "city": "Mount Pleasant",
+    "state": "South Carolina",
+    "rookie_year": 2013,
+    "school_name": "East Cooper Center for Advanced Studies",
+    "number_of_awards": 10,
+    "event_distance": "394 mi"
+  },
+  {
+    "team_number": 4701,
+    "nickname": "Warriors (Team W.I.R.E.)",
+    "city": "Savannah",
+    "state": "Georgia",
+    "rookie_year": 2013,
+    "school_name": "Herchel V Jenkins High School",
+    "number_of_awards": 10,
+    "event_distance": "339 mi"
+  },
+  {
+    "team_number": 5109,
+    "nickname": "Gladiator Robotics",
+    "city": "Johns Creek",
+    "state": "Georgia",
+    "rookie_year": 2014,
+    "school_name": "Johns Creek High School",
+    "number_of_awards": 16,
+    "event_distance": "96.2 mi"
+  },
+  {
+    "team_number": 5293,
+    "nickname": "Metal Crusaders",
+    "city": "Duluth",
+    "state": "Georgia",
+    "rookie_year": 2014,
+    "school_name": "Duluth High School",
+    "number_of_awards": 9,
+    "event_distance": "97.9 mi"
+  },
+  {
+    "team_number": 5900,
+    "nickname": "Career Blazer Robotics - The Fighting Mongooses",
+    "city": "Dalton",
+    "state": "Georgia",
+    "rookie_year": 2016,
+    "school_name": "Whitfield County Career Academy",
+    "number_of_awards": 23,
+    "event_distance": "6.9 mi"
+  },
+  {
+    "team_number": 6023,
+    "nickname": "DISCBOTS",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "rookie_year": 2016,
+    "school_name": "Family/Community",
+    "number_of_awards": 4,
+    "event_distance": "87.7 mi"
+  },
+  {
+    "team_number": 6340,
+    "nickname": "The Marist Manatees",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "rookie_year": 2017,
+    "school_name": "Marist School",
+    "number_of_awards": 24,
+    "event_distance": "84.7 mi"
+  },
+  {
+    "team_number": 6341,
+    "nickname": "Firestorm Robotics",
+    "city": "Acworth",
+    "state": "Georgia",
+    "rookie_year": 2017,
+    "school_name": "Family/Community & Marietta High School & Etowah High School",
+    "number_of_awards": 9,
+    "event_distance": "58.0 mi"
+  },
+  {
+    "team_number": 6366,
+    "nickname": "RAM Rodz Robotics",
+    "city": "Simpsonville",
+    "state": "South Carolina",
+    "rookie_year": 2017,
+    "school_name": "Hillcrest High School",
+    "number_of_awards": 12,
+    "event_distance": "230 mi"
+  },
+  {
+    "team_number": 6712,
+    "nickname": "Mountaineers",
+    "city": "Chatsworth",
+    "state": "Georgia",
+    "rookie_year": 2017,
+    "school_name": "North Murray High School",
+    "number_of_awards": 4,
+    "event_distance": "14.5 mi"
+  },
+  {
+    "team_number": 6829,
+    "nickname": "Ignite Robotics",
+    "city": "Suwanee",
+    "state": "Georgia",
+    "rookie_year": 2018,
+    "school_name": "Family/Community",
+    "number_of_awards": 27,
+    "event_distance": "107 mi"
+  },
+  {
+    "team_number": 6919,
+    "nickname": "The Commodores",
+    "city": "Albany",
+    "state": "Georgia",
+    "rookie_year": 2018,
+    "school_name": "Commodore Conyers College & Career Academy",
+    "number_of_awards": 28,
+    "event_distance": "271 mi"
+  },
+  {
+    "team_number": 7451,
+    "nickname": "AvengerRobotics",
+    "city": "Cumming",
+    "state": "Georgia",
+    "rookie_year": 2019,
+    "school_name": "Alliance Academy for Innovation",
+    "number_of_awards": 19,
+    "event_distance": "86.5 mi"
+  },
+  {
+    "team_number": 7538,
+    "nickname": "Metal Mountain",
+    "city": "Lawrenceville",
+    "state": "Georgia",
+    "rookie_year": 2019,
+    "school_name": "Mountain View High School",
+    "number_of_awards": 8,
+    "event_distance": "113 mi"
+  },
+  {
+    "team_number": 8080,
+    "nickname": "Sequoyah Robotics",
+    "city": "Canton",
+    "state": "Georgia",
+    "rookie_year": 2020,
+    "school_name": "Sequoyah High School",
+    "number_of_awards": 4,
+    "event_distance": "66.4 mi"
+  },
+  {
+    "team_number": 8137,
+    "nickname": "Byting Bulldogs",
+    "city": "Georgetown",
+    "state": "South Carolina",
+    "rookie_year": 2020,
+    "school_name": "Georgetown High School",
+    "number_of_awards": 3,
+    "event_distance": "434 mi"
+  },
+  {
+    "team_number": 832,
+    "nickname": "OSCAR",
+    "city": "Roswell",
+    "state": "Georgia",
+    "rookie_year": 2002,
+    "school_name": "Family/Community & Roswell High School",
+    "number_of_awards": 30,
+    "event_distance": "80.7 mi"
+  },
+  {
+    "team_number": 8575,
+    "nickname": "The Due Westerners",
+    "city": "Due West",
+    "state": "South Carolina",
+    "rookie_year": 2021,
+    "school_name": "Due West Robotics",
+    "number_of_awards": 16,
+    "event_distance": "216 mi"
+  },
+  {
+    "team_number": 8736,
+    "nickname": "The Mechanisms",
+    "city": "Marietta",
+    "state": "Georgia",
+    "rookie_year": 2022,
+    "school_name": "Family/Community",
+    "number_of_awards": 11,
+    "event_distance": "70.3 mi"
+  },
+  {
+    "team_number": 8865,
+    "nickname": "Dacula Droids",
+    "city": "Dacula",
+    "state": "Georgia",
+    "rookie_year": 2022,
+    "school_name": "Dacula High School",
+    "number_of_awards": 4,
+    "event_distance": "112 mi"
+  },
+  {
+    "team_number": 8866,
+    "nickname": "Innovation Robotics",
+    "city": "Alpharetta",
+    "state": "Georgia",
+    "rookie_year": 2022,
+    "school_name": "Innovation Academy Stem Magnet High School",
+    "number_of_awards": 8,
+    "event_distance": "78.5 mi"
+  },
+  {
+    "team_number": 9260,
+    "nickname": "Built4Bibb Robotics",
+    "city": "Macon",
+    "state": "Georgia",
+    "rookie_year": 2023,
+    "school_name": "Bibb County School District",
+    "number_of_awards": 5,
+    "event_distance": "177 mi"
+  },
+  {
+    "team_number": 9293,
+    "nickname": "Caffeinated",
+    "city": "Marietta",
+    "state": "Georgia",
+    "rookie_year": 2023,
+    "school_name": "Family/Community",
+    "number_of_awards": 5,
+    "event_distance": "70.3 mi"
+  },
+  {
+    "team_number": 9315,
+    "nickname": "Coding Comets",
+    "city": "Columbia",
+    "state": "South Carolina",
+    "rookie_year": 2023,
+    "school_name": "Family/Community",
+    "number_of_awards": 3,
+    "event_distance": "302 mi"
+  }
+]
