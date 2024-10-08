@@ -1,8 +1,8 @@
 import { writeFileSync } from 'fs';
 
-let event = '2023gacmp';
+let event = '2024gagr';
 let district = '2024pch';
-let isEvent = false; // true to get teams by event, false to sort teams by district
+let isEvent = true; // true to get teams by event, false to sort teams by district
 
 let url;
 let name;
@@ -22,12 +22,13 @@ const options = {
 
 let teams = new Array();
 const getTeams = async (url) => {
-    const response = await fetch(url, options);
-    const data = await response.json();
-    for (var i = 0; i < data.length; i++) {
-        teams.push(data[i].team_number);
-    }
-    return data;
+    // const response = await fetch(url, options);
+    // const data = await response.json();
+    // for (var i = 0; i < data.length; i++) {
+    //     teams.push(data[i].team_number);
+    // }
+    teams = [832, 1002, 1261, 1414, 1466, 1648, 1683, 1746, 1771, 1833, 2415, 2974, 3318, 3344, 3635, 4026, 4188, 4189, 4509, 4576, 5074, 5109, 5219, 5293, 5608, 5900, 6023, 6705, 6829, 6905, 6925, 7538, 8080, 8100, 8577, 8736, 8761, 8815, 8866, 9522];
+    return teams;
 };
 
 let teamsData = new Array(); 

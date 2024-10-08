@@ -2,7 +2,7 @@ import { readFileSync } from 'fs';
 import { writeFileSync } from 'fs';
 
 const geocodingAPIKey = 'AIzaSyBDL3-BcKPUdJDhzbkA1te5lMg_iIMRBIs'; // take out when making code public
-const dataFile = '2023gacmp.json'; // name of file to add distance info to 
+const dataFile = '2024gagr.json'; // name of file to add distance info to 
 let eventLocation = 'dalton convention center dalton georgia' // event location
 
 let combinedData = new Array();
