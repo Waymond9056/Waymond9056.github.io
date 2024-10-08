@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="get_team_data.js"></script>
+        <script src="script.js"></script>
     </head>
 
     <!-- Visible Part of Code (body) -->
@@ -23,6 +24,18 @@
         <div class="input-container">
             <input type="text" id="teamInput" placeholder="FRC Team">
             <button onclick="guessAttempted()">Guess</button>
+        </div>
+
+        
+        
+        <div class="input-dropdown">
+            <select id="input" onmousedown="if(this.options.length>5){this.size=5;}">
+            </select>
+            <script>
+                addOptions();
+                document.getElementById("input").onchange = guessAttempted;
+            </script>
+
         </div>
 
         <div class="table-container">
