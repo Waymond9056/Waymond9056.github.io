@@ -6,9 +6,9 @@
         <title> FRCdle </title>
         <link rel="stylesheet" href="styles.css">
         <!-- verify that this works when pushed -->
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="get_team_data.js"></script>
+        <script src="data/2024gagr.js"></script>
         <script src="script.js"></script>
     </head>
 
@@ -21,12 +21,10 @@
 
         <hr>
 
-        <div class="input-container">
+        <!-- <div class="input-container">
             <input type="text" id="teamInput" placeholder="FRC Team">
             <button onclick="guessAttempted()">Guess</button>
-        </div>
-
-        
+        </div> -->
         
         <div class="input-dropdown">
             <select id="input" onmousedown="if(this.options.length>5){this.size=5;}">
@@ -45,7 +43,7 @@
                     <th> Team Number </th>
                     <th> Team Name </th>
                     <th> Rookie Year </th>
-                    <th> Blue Banners </th>
+                    <th> Number of Awards </th>
                     <th> Distance from GRITS </th>
                 </tr>
               </thead>
@@ -57,8 +55,5 @@
         </p>
         
     </body>
-    <script>
-        
-    </script>
     
 </html>

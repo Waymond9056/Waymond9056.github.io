@@ -1,4 +1,4 @@
-const data = [
+var data = [
   {
     "team_number": 832,
     "nickname": "OSCAR",
@@ -399,4 +399,4 @@ const data = [
     "number_of_awards": 3,
     "event_distance": "119 mi"
   }
-]
+];
