@@ -1,8 +1,14 @@
+/**
+ *  run in node with arguments: 
+ *  1) event/district code, 2) true for event/false for district
+ *  Example:
+ *  node get_team_data.mjs 2024pch false
+ */
 import { writeFileSync } from 'fs';
 
-let event = '2024gagr';
-let district = '2024pch';
-let isEvent = true; // true to get teams by event, false to sort teams by district
+let event = process.argv[2];
+let district = process.argv[2];
+let isEvent = process.argv[3]; 
 
 let url;
 let name;
