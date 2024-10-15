@@ -27,12 +27,11 @@ function addTableRow(teamData) {
       team_number_cell.className = "tdwrong";
     }
 
+    team_number_cell.textContent = team_number;
     if (team_number < answer.team_number) {
-      team_number_cell.textContent = teamData[0] + "↑";
+      team_number_cell.textContent += "↑";
     } else if (team_number > answer.team_number) {
-      team_number_cell.textContent = teamData[0] + "↓";
-    } else {
-      team_number_cell.textContent = teamData[0];
+      team_number_cell.textContent += "↓";
     }
     newRow.appendChild(team_number_cell);
 
@@ -53,7 +52,7 @@ function addTableRow(teamData) {
     } else {
       city_cell.className = "tdright";
     }
-    city_cell.textContent = teamData[2];
+    city_cell.textContent = city;
     newRow.appendChild(city_cell);
 
     const state = teamData[3];
@@ -63,7 +62,7 @@ function addTableRow(teamData) {
     } else {
       state_cell.className = "tdright";
     }
-    state_cell.textContent = teamData[3];
+    state_cell.textContent = state;
     newRow.appendChild(state_cell);
     
     const rookie_year = teamData[4];
@@ -76,12 +75,11 @@ function addTableRow(teamData) {
       rookie_year_cell.className = "tdwrong";
     }
 
+    rookie_year_cell.textContent = rookie_year;
     if (rookie_year < answer.rookie_year) {
-      rookie_year_cell.textContent = teamData[4] + "↑";
+      rookie_year_cell.textContent += "↑";
     } else if (rookie_year > answer.rookie_year) {
-      rookie_year_cell.textContent = teamData[4] + "↓";
-    } else {
-      rookie_year_cell.textContent = teamData[4];
+      rookie_year_cell.textContent += "↓";
     }
     newRow.appendChild(rookie_year_cell);
 
@@ -95,12 +93,11 @@ function addTableRow(teamData) {
       number_of_awards_cell.className = "tdwrong";
     }
 
+    number_of_awards_cell.textContent = number_of_awards;
     if (number_of_awards < answer.number_of_awards) {
-      number_of_awards_cell.textContent = teamData[5] + "↑";
+      number_of_awards_cell.textContent += "↑";
     } else if (number_of_awards > answer.number_of_awards) {
-      number_of_awards_cell.textContent = teamData[5] + "↓";
-    } else {
-      number_of_awards_cell.textContent = teamData[5];
+      number_of_awards_cell.textContent += "↓";
     }
     newRow.appendChild(number_of_awards_cell);
 
@@ -114,12 +111,11 @@ function addTableRow(teamData) {
       event_distance_cell.className = "tdwrong";
     }
 
+    event_distance_cell.textContent = event_distance;
     if (event_distance < answer.event_distance) {
-      event_distance_cell.textContent = teamData[6] + "↑";
+      event_distance_cell.textContent += "↑";
     } else if (event_distance > answer.event_distance) {
-      event_distance_cell.textContent = teamData[6] + "↓";
-    } else {
-      event_distance_cell.textContent = teamData[6];
+      event_distance_cell.textContent += "↓";
     }
     newRow.appendChild(event_distance_cell);
 

@@ -1,6 +1,6 @@
 /**
  *  run in node with arguments: 
- *  1) event/district code, 2) true for event/false for district
+ *  1) event/district code, 2) location of event
  *  Example:
  *  node get_event_data.mjs 2024pch 'dalton convention center dalton georgia'
  */
