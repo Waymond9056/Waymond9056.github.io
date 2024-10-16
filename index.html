@@ -21,6 +21,9 @@
 
 
             <!-- <img src="images/favicon.ico" style="width:100px">  -->
+            <button id="reset_button" >
+                <img id="reset_image" src="images/reset.png">
+            </button>
             <button id="help_button" >
                 <img id="menu_image" src="images/help.png"/>
             </button>
@@ -39,15 +42,10 @@
         <div class="input-dropdown">
             <select id="input">
             </select>
-            <script>
-                addOptions();
-                document.getElementById("input").onchange = guessAttempted;
-            </script>
-
         </div>
 
         <div class="table-container">
-            <table id="dataTable">
+            <table id="data-table">
               <thead>
                 <tr>
                     <th> Team Number </th>
@@ -59,7 +57,7 @@
                     <th> Distance from GRITS </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="table-body">
               </tbody>
             </table>
           </div>

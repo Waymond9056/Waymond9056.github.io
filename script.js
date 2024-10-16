@@ -1,8 +1,9 @@
-let answer = data[0];
+let answerIndex = 0;
+let answer = data[answerIndex];
 // declare which row we're adding to so that the animation can apply to only that row
 let row = 0;
 function addTableRow(teamData) {
-    const table = document.getElementById('dataTable');
+    const table = document.getElementById('data-table');
     const tbody = table.querySelector('tbody');
     const newRow = document.createElement('tr');
     newRow.id = "tr" + row;
@@ -142,7 +143,7 @@ function guessAttempted(id) {
   )
 }
 
-function addOptions() {
+function addOptions(inData) {
 
   $(document).ready(function() {
     $('.input-dropdown').select2({
@@ -153,17 +154,22 @@ function addOptions() {
     });
 
     var option;
-    for (var i = 0; i < data.length; i++) {
-      option = new Option(data[i].team_number + ' - ' + data[i].nickname, i, false, false);
-      console.log(option);
+    for (var i = 0; i < inData.length; i++) {
+      option = new Option(inData[i].team_number + ' - ' + inData[i].nickname, i, false, false);
       $('.input-dropdown').append(option).trigger('change');
     }
-
-    $('.input-dropdown').on('select2:select', function (e) {
-      guessAttempted(e.params.data.id);
-      $('input-dropdown').trigger('change');
-    });
   });
+
+}
+
+function endGame(won) {
+  if (won) {
+    // make a visual for winning
+  } else {
+    // visual for losing
+  }
+
+  // reset(data) when retry is pressed or direct player to switch mode
 
 }
 
@@ -180,5 +186,35 @@ function addOptions() {
 //    if(row == cnt)clearInterval(myRowTimer);
 // }
 
+function reset(newData) {
+  $(document).ready(function() {
+    $('.input-dropdown').find("option").remove().end();
+    addOptions(newData);
+
+    answerIndex = Math.floor(Math.random() * newData.length);
+    answer = data[answerIndex];
+    console.log(answerIndex);
+    
+    var tableBody = document.getElementById('table-body');
+    console.log(tableBody);
+    for (var i = row - 1; i > -1; i--) {
+      tableBody.removeChild(document.getElementById("tr" + i));
+    }
+    row = 0;
+  });
+}
+
+$(document).ready(function() {
+  reset(data);
+
+  $('#reset_button').click(function() {
+    reset(data);
+  })
+
+  $('.input-dropdown').on('select2:select', function (e) {
+    guessAttempted(e.params.data.id);
+    $('input-dropdown').trigger('change');
+  });
+});
 
 
