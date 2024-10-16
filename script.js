@@ -130,6 +130,12 @@ function addTableRow(teamData) {
 function guessAttempted(id) {
   let index = id;
 
+  if (index == answerIndex) {
+    winGame();
+  } else if (row == 4) {
+    loseGame();
+  }
+
   addTableRow(
       [
           data[index].team_number,
@@ -162,38 +168,35 @@ function addOptions(inData) {
 
 }
 
-function endGame(won) {
-  if (won) {
-    // make a visual for winning
-  } else {
-    // visual for losing
-  }
-
-  // reset(data) when retry is pressed or direct player to switch mode
-
+function winGame() {
+  $('.title').children().replaceWith("<p>won</p>");
+  $('.input-dropdown').select2({
+    disabled: true,
+    templateSelection: function (state) {
+      return answer.team_number + ' - ' + answer.nickname;
+    }
+  });
 }
 
-// let tds = document.querySelectorAll('td')
-// let cnt = tds.length
-
-// const myRowTimer = setInterval(displayRow, 1000);
-// let row = 1;
-
-// function displayRow(){
-
-//    tds[row].classList.toggle("none");
-//    row++
-//    if(row == cnt)clearInterval(myRowTimer);
-// }
+function loseGame() {
+  $('.title').children().replaceWith("<p>lose</p>");
+  $('.input-dropdown').select2({
+    disabled: true,
+    templateSelection: function (state) {
+      return "Out of guesses...";
+    }
+  });
+}
 
 function reset(newData) {
   $(document).ready(function() {
     $('.input-dropdown').find("option").remove().end();
     addOptions(newData);
+    $('.input-dropdown').prop("disabled", false);
 
     answerIndex = Math.floor(Math.random() * newData.length);
     answer = data[answerIndex];
-    console.log(answerIndex);
+    console.log(answer.team_number);
     
     var tableBody = document.getElementById('table-body');
     console.log(tableBody);
