@@ -126,37 +126,45 @@ function addTableRow(teamData) {
     row++;
 }
 
-function guessAttempted() {
-  document.getElementById("input").size = 0;
-    const input = document.getElementById("input").value.replace(/(^\d+)(.+$)/i,'$1');;
-    let index = 0;
-    
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].team_number == input) {
-        index = i;
-      }
-    }
+function guessAttempted(id) {
+  let index = id;
 
-    addTableRow(
-        [
-            data[index].team_number,
-            data[index].nickname, 
-            data[index].city,
-            data[index].state,
-            data[index].rookie_year, 
-            data[index].number_of_awards, 
-            data[index].event_distance
-        ]
-    )
+  addTableRow(
+      [
+          data[index].team_number,
+          data[index].nickname, 
+          data[index].city,
+          data[index].state,
+          data[index].rookie_year, 
+          data[index].number_of_awards, 
+          data[index].event_distance
+      ]
+  )
 }
 
 function addOptions() {
-  var options = "<option value='' disabled selected hidden>FRC Team</option>";
 
-  for (var i = 0; i < data.length; i++) {
-    options += "<option>" + data[i].team_number + " - " + data[i].nickname + "</option>";
-  }
-  document.getElementById("input").innerHTML = options;
+  $(document).ready(function() {
+    $('.input-dropdown').select2({
+      placeholder: "Select a team...",
+      templateSelection: function (state) {
+        return 'Select a team...';
+      }
+    });
+
+    var option;
+    for (var i = 0; i < data.length; i++) {
+      option = new Option(data[i].team_number + ' - ' + data[i].nickname, i, false, false);
+      console.log(option);
+      $('.input-dropdown').append(option).trigger('change');
+    }
+
+    $('.input-dropdown').on('select2:select', function (e) {
+      guessAttempted(e.params.data.id);
+      $('input-dropdown').trigger('change');
+    });
+  });
+
 }
 
 // let tds = document.querySelectorAll('td')
