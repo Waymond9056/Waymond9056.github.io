@@ -1,10 +1,11 @@
 let answer = data[0];
-
+// declare which row we're adding to so that the animation can apply to only that row
+let row = 0;
 function addTableRow(teamData) {
     const table = document.getElementById('dataTable');
     const tbody = table.querySelector('tbody');
     const newRow = document.createElement('tr');
-
+    newRow.id = "tr" + row;
     // teamData.forEach((value, index) => {
     //   if (value == answer)
     //   const cell = document.createElement('td');
@@ -118,12 +119,11 @@ function addTableRow(teamData) {
       event_distance_cell.textContent += " ↓";
     }
     newRow.appendChild(event_distance_cell);
-
-    // const team_number = document.createElement('td');
-    //   team_number.textContent = teamData[0];
-    //   newRow.appendChild(team_number);
-
     tbody.appendChild(newRow);
+
+    document.getElementById("tr" + row).animate([{opacity:0},{opacity:1}],1000);
+
+    row++;
 }
 
 function guessAttempted() {
