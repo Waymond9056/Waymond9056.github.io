@@ -21,6 +21,7 @@
 
             <h1> FRCdle </h1>
 
+
             <!-- <img src="images/favicon.ico" style="width:100px">  -->
             <button id="reset_button" >
                 <img id="reset_image" src="images/reset.png">
@@ -42,12 +43,22 @@
             <input type="text" id="teamInput" placeholder="FRC Team">
             <button onclick="guessAttempted()">Guess</button>
         </div> -->
-        <div class="selector"> 
-            <div class="input-dropdown">
-                <select id="input">
-                </select>
+
+
+            <div id="image_text">
+                <img id="team_image" src="robots/1771.png"> </img> 
+                <div id="event_tries">
+                    <h2> Event: GRITS </h2>
+                    <h3 id="num_tries">Tries: 0 / 5</h3>
+                </div>
+                
             </div>
-        </div>
+            <div id="selector"> 
+                <div class="input-dropdown">
+                    <select id="input">
+                    </select>
+                </div>
+            </div>
         
 
         <div class="table-container">

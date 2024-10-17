@@ -136,6 +136,9 @@ function guessAttempted(id) {
     loseGame();
   }
 
+  $("#team_image").css({"filter": "blur(" + ((3 - row) * 2) + "px)"});
+  document.getElementById("num_tries").innerHTML = "Tries " + (row + 1) + " / 5";
+
   addTableRow(
       [
           data[index].team_number,
@@ -195,7 +198,7 @@ function loseGame() {
       return "Out of guesses...";
     }
   });
-  document.getElementById("message").innerHTML = "The team was: " + answer.team_number;
+  document.getElementById("message").innerHTML = "The team was: " + answer.team_number + " - " + answer.nickname;
   setTimeout(function() {
     myPopup.classList.add("show")
   }, 1000);  
@@ -221,6 +224,8 @@ function reset(newData) {
       tableBody.removeChild(document.getElementById("tr" + i));
     }
     row = 0;
+    $("#team_image").css({"filter": "blur(10px"});
+
   });
 }
 

@@ -59,6 +59,7 @@
     display: flex;
 }
 
+
 hr {
     margin-bottom: 20px;
 }
@@ -181,9 +182,28 @@ th {
     margin-bottom: 20px;
   } */
 
-.selector {
-    width: 30%;
+#image_text {
+    width: 40%;
     margin: auto;
+}
+
+#team_image {
+    width: 350px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+#event_tries {
+    float: right;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+#selector {
+    width: 40%;
+    margin: auto;
+    clear: left;
 }
 
 .input-dropdown {
