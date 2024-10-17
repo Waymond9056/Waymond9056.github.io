@@ -137,7 +137,7 @@ function guessAttempted(id) {
   }
 
   $("#team_image").css({"filter": "blur(" + ((3 - row) * 2) + "px)"});
-  document.getElementById("num_tries").innerHTML = "Tries " + (row + 1) + " / 5";
+  $("#num_tries").html("Tries " + (row + 1) + " / 5");
 
   addTableRow(
       [
@@ -208,6 +208,10 @@ function loseGame() {
   })
 }
 
+function getResults() {
+  return "🟩";
+}
+
 function reset(newData) {
   $(document).ready(function() {
     $('.input-dropdown').find("option").remove().end();
@@ -225,7 +229,7 @@ function reset(newData) {
     }
     row = 0;
     $("#team_image").css({"filter": "blur(10px"});
-
+    $("#num_tries").html("Tries 0 / 5");
   });
 }
 
@@ -239,6 +243,12 @@ $(document).ready(function() {
   $('.input-dropdown').on('select2:select', function (e) {
     guessAttempted(e.params.data.id);
     $('input-dropdown').trigger('change');
+  });
+
+  $('#copy_results').on('click', function() {
+    navigator.clipboard.writeText(
+      getResults()
+    )
   });
 });
 
