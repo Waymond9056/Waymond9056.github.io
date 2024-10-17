@@ -2,6 +2,9 @@ let answerIndex = 0;
 let answer = data[answerIndex];
 // declare which row we're adding to so that the animation can apply to only that row
 let row = 0;
+let win_streak = 0;
+let won = false;
+
 function addTableRow(teamData) {
     const table = document.getElementById('data-table');
     const tbody = table.querySelector('tbody');
@@ -183,11 +186,18 @@ function winGame() {
   document.getElementById("message").innerHTML = "Congratulations!";
   setTimeout(function() {
     myPopup.classList.add("show")
-
+    $("#next_round_button").show();
   }, 1000);
+
   $('#closePopup').click(function() {
     myPopup.classList.remove("show");
   })
+
+  won = true;
+  win_streak++;
+  $("#next_round_button").html("Next Round");
+  $("#streak").html("Win Streak: " + win_streak +  " 🔥");
+
 }
 
 function loseGame() {
@@ -201,11 +211,17 @@ function loseGame() {
   document.getElementById("message").innerHTML = "The team was: " + answer.team_number + " - " + answer.nickname;
   setTimeout(function() {
     myPopup.classList.add("show")
+    $("#next_round_button").show();
   }, 1000);  
   
   $('#closePopup').click(function() {
     myPopup.classList.remove("show");
   })
+
+  won = false;
+  win_streak = 0;
+  $("#next_round_button").html("Retry");
+  $("#streak").html("Win Streak: " + win_streak +  " 🔥");
 }
 
 function getResults() {
@@ -220,7 +236,6 @@ function reset(newData) {
 
     answerIndex = Math.floor(Math.random() * newData.length);
     answer = data[answerIndex];
-    console.log(answer.team_number);
     
     var tableBody = document.getElementById('table-body');
     console.log(tableBody);
@@ -233,11 +248,36 @@ function reset(newData) {
   });
 }
 
-$(document).ready(function() {
-  reset(data);
+function next_round(newData) {
+  $(document).ready(function() {
+    $('.input-dropdown').find("option").remove().end();
+    addOptions(newData);
+    $('.input-dropdown').prop("disabled", false);
 
+    answerIndex = Math.floor(Math.random() * newData.length);
+    answer = data[answerIndex];
+    
+    var tableBody = document.getElementById('table-body');
+    console.log(tableBody);
+    for (var i = row - 1; i > -1; i--) {
+      tableBody.removeChild(document.getElementById("tr" + i));
+    }
+    row = 0;
+    $("#team_image").css({"filter": "blur(10px"});
+    $("#num_tries").html("Tries 0 / 5");
+    $("#next_round_button").hide();
+  });
+}
+
+$(document).ready(function() {
+  // reset(data);
+  next_round(data);
   $('#reset_button').click(function() {
     reset(data);
+  })
+
+  $('#next_round_button').click(function() {
+    next_round(data);
   })
 
   $('.input-dropdown').on('select2:select', function (e) {
@@ -245,7 +285,7 @@ $(document).ready(function() {
     $('input-dropdown').trigger('change');
   });
 
-  $('#copy_results').on('click', function() {
+  $('#copy_results_button').on('click', function() {
     navigator.clipboard.writeText(
       getResults()
     )
