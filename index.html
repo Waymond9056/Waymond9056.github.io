@@ -17,7 +17,7 @@
     <!-- Visible Part of Code (body) -->
     <body>
         <div class="title">
-            <div class="loader"></div>
+            <div id="water_loader"></div>
 
             <h1> FRCdle </h1>
 
@@ -30,6 +30,9 @@
             </button>
             <button id="statistics_button" >
                 <img id="menu_image" src="images/statistics.png"/>
+            </button>
+            <button id="settings_button" >
+                <img id="menu_image" src="images/settings.png"/>
             </button>
         </div>
 
@@ -66,6 +69,21 @@
           </div>
         <p>
         </p>
+
+
+        <div id="myPopup" class="popup">
+            <div class="popup-content">
+                <button id="closePopup"> ✖ </button>
+                <div id="cube_loader"></div>
+                <h1 id="message">
+                    
+                </h1>
+                <p>Copy your results here:</p>
+                <button id="copyResults">
+                    Share 
+                </button>
+            </div>
+        </div>
         
     </body>
     

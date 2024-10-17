@@ -103,20 +103,20 @@ function addTableRow(teamData) {
     }
     newRow.appendChild(number_of_awards_cell);
 
-    const event_distance = teamData[6];
+    const event_distance = parseFloat(teamData[6]);
+    const guessed_distance = parseFloat(answer.event_distance);
     const event_distance_cell = document.createElement('td');
-    if (event_distance == answer.event_distance) {
+    if (event_distance == guessed_distance) {
       event_distance_cell.className = "tdright";
-    } else if (Math.abs(event_distance - answer.event_distance) <= 10) {
+    } else if (Math.abs(event_distance - guessed_distance) <= 10) {
       event_distance_cell.className = "tdclose";
     } else {
       event_distance_cell.className = "tdwrong";
     }
-
-    event_distance_cell.textContent = event_distance;
-    if (event_distance < answer.event_distance) {
+    event_distance_cell.textContent = teamData[6];
+    if (event_distance < guessed_distance) {
       event_distance_cell.textContent += " ↑";
-    } else if (event_distance > answer.event_distance) {
+    } else if (event_distance > guessed_distance) {
       event_distance_cell.textContent += " ↓";
     }
     newRow.appendChild(event_distance_cell);
@@ -169,23 +169,40 @@ function addOptions(inData) {
 }
 
 function winGame() {
-  $('.title').children().replaceWith("<p>won</p>");
+  // $('.title').children().replaceWith("<p>won</p>");
   $('.input-dropdown').select2({
     disabled: true,
     templateSelection: function (state) {
       return answer.team_number + ' - ' + answer.nickname;
     }
   });
+
+  document.getElementById("message").innerHTML = "Congratulations!";
+  setTimeout(function() {
+    myPopup.classList.add("show")
+
+  }, 1000);
+  $('#closePopup').click(function() {
+    myPopup.classList.remove("show");
+  })
 }
 
 function loseGame() {
-  $('.title').children().replaceWith("<p>lose</p>");
+  // $('.title').children().replaceWith("<p>lose</p>");
   $('.input-dropdown').select2({
     disabled: true,
     templateSelection: function (state) {
       return "Out of guesses...";
     }
   });
+  document.getElementById("message").innerHTML = "The team was: " + answer.team_number;
+  setTimeout(function() {
+    myPopup.classList.add("show")
+  }, 1000);  
+  
+  $('#closePopup').click(function() {
+    myPopup.classList.remove("show");
+  })
 }
 
 function reset(newData) {
@@ -219,5 +236,32 @@ $(document).ready(function() {
     $('input-dropdown').trigger('change');
   });
 });
+
+// $(document).ready(function() {
+
+// });
+
+// myButton.addEventListener(
+//   "click",
+//   function () {
+//       myPopup.classList.add("show");
+//   }
+// );
+// closePopup.addEventListener(
+//   "click",
+//   function () {
+//       
+//   }
+// );
+// window.addEventListener(
+//   "click",
+//   function (event) {
+//       if (event.target == myPopup) {
+//           myPopup.classList.remove(
+//               "show"
+//           );
+//       }
+//   }
+// );
 
 
