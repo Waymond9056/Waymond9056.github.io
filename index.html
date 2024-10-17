@@ -17,8 +17,9 @@
     <!-- Visible Part of Code (body) -->
     <body>
         <div class="title">
-            <h1> FRCdle </h1>
+            <div class="loader"></div>
 
+            <h1> FRCdle </h1>
 
             <!-- <img src="images/favicon.ico" style="width:100px">  -->
             <button id="reset_button" >
@@ -38,11 +39,13 @@
             <input type="text" id="teamInput" placeholder="FRC Team">
             <button onclick="guessAttempted()">Guess</button>
         </div> -->
-        
-        <div class="input-dropdown">
-            <select id="input">
-            </select>
+        <div class="selector"> 
+            <div class="input-dropdown">
+                <select id="input">
+                </select>
+            </div>
         </div>
+        
 
         <div class="table-container">
             <table id="data-table">

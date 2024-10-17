@@ -1,3 +1,27 @@
+/* HTML: <div class="loader"></div> */
+.loader {    
+    margin-right: 10px;
+    --r1: 154%;
+    --r2: 68.5%;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%; 
+    background:
+      radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+      radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
+      radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+      #ccc;
+    background-size: 50.5% 220%;
+    background-position: -100% 0%,0% 0%,100% 0%;
+    background-repeat:no-repeat;
+    animation: l9 2s infinite linear;
+  }
+  @keyframes l9 {
+      33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
+      66%  {background-position: -100%  66%,0%   66% ,100% 66% }
+      100% {background-position:    0% 100%,100% 100%,200% 100%}
+  }
+
 .title {
     margin: auto;
     line-height: 0;
@@ -11,16 +35,8 @@
     display: flex;
 }
 
-
-#vertical_line {
-    /* border-left: 20px black; */
-    /* height: 40px; */
-    /* //width="1" size="500" style="0 auto" */
-    width: 1px;
-    color: black;
-    background-color: black;
-    size: 40px;
-    margin-right: auto;
+hr {
+    margin-bottom: 20px;
 }
 
 #reset_button {
@@ -74,6 +90,7 @@ th {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center;
+    height: 30px;
 }
 
 .tdwrong {
@@ -84,7 +101,7 @@ th {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center;
-    height: 50px;
+    height: 70px;
 }
 
 .tdclose {
@@ -95,7 +112,7 @@ th {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center;
-    height: 50px;
+    height: 70px;
 }
 
 .tdright {
@@ -106,11 +123,14 @@ th {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center;
-    height: 50px;
+    height: 70px;
 }
 
+.table-container {
+    margin-top: 20px;
+}
 
-table {
+#data-table {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -125,12 +145,21 @@ table {
     margin-bottom: 20px;
   } */
 
+.selector {
+    width: 70%;
+    margin: auto;
+}
+
 .input-dropdown {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
 }
 
 .input-dropdown select {
@@ -141,4 +170,26 @@ table {
     border: 1px solid #caced1;
     border-radius: 0.25rem;
     color: #000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.select2-selection__placeholder {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    
+}
+
+.select2-selection__rendered {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+
+}
+
+.select2-results {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+
 }
