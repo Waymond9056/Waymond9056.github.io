@@ -157,7 +157,6 @@ function guessAttempted(id) {
 
 function addOptions(inData) {
 
-  $(document).ready(function() {
     $('.input-dropdown').select2({
       placeholder: "Select a team...",
       templateSelection: function (state) {
@@ -170,12 +169,9 @@ function addOptions(inData) {
       option = new Option(inData[i].team_number + ' - ' + inData[i].nickname, i, false, false);
       $('.input-dropdown').append(option).trigger('change');
     }
-  });
-
 }
 
 function winGame() {
-  // $('.title').children().replaceWith("<p>won</p>");
   $('.input-dropdown').select2({
     disabled: true,
     templateSelection: function (state) {
@@ -183,7 +179,7 @@ function winGame() {
     }
   });
 
-  document.getElementById("message").innerHTML = "Congratulations!";
+  $("#message").html("Congratulations!");
   setTimeout(function() {
     myPopup.classList.add("show")
     $("#next_round_button").show();
@@ -201,7 +197,6 @@ function winGame() {
 }
 
 function loseGame() {
-  // $('.title').children().replaceWith("<p>lose</p>");
   $('.input-dropdown').select2({
     disabled: true,
     templateSelection: function (state) {
@@ -224,53 +219,55 @@ function loseGame() {
   $("#streak").html("Win Streak: " + win_streak +  " 🔥");
 }
 
-function getResults() {
-  return "🟩";
+function getSquares() {
+  var tableBody = document.getElementById('table-body'); 
+  var cells = tableBody.getElementsByTagName('td');
+  var text = '';
+  console.log(cells);
+
+  for (var i = 0; i < cells.length; i++) {
+
+    if (i > 0 && i % 7 == 0) {
+      text += '\n';
+    }
+    var className = cells[i].className;
+
+    if (className == 'tdwrong') {
+      text += '⬛';
+    } else if (className == 'tdright') {
+      text += '🟩';
+    } else if (className == 'tdclose') {
+      text += '🟨';
+    }
+  }
+  return text;
 }
 
 function reset(newData) {
-  $(document).ready(function() {
-    $('.input-dropdown').find("option").remove().end();
-    addOptions(newData);
-    $('.input-dropdown').prop("disabled", false);
+  $('.input-dropdown').find("option").remove().end();
+  addOptions(newData);
+  $('.input-dropdown').prop("disabled", false);
 
-    answerIndex = Math.floor(Math.random() * newData.length);
-    answer = data[answerIndex];
-    
-    var tableBody = document.getElementById('table-body');
-    console.log(tableBody);
-    for (var i = row - 1; i > -1; i--) {
-      tableBody.removeChild(document.getElementById("tr" + i));
-    }
-    row = 0;
-    $("#team_image").css({"filter": "blur(10px"});
-    $("#num_tries").html("Tries 0 / 5");
-  });
+  answerIndex = Math.floor(Math.random() * newData.length);
+  answer = data[answerIndex];
+  console.log(answer.team_number);
+  
+  var tableBody = document.getElementById('table-body');
+  console.log(tableBody);
+  for (var i = row - 1; i > -1; i--) {
+    tableBody.removeChild(document.getElementById("tr" + i));
+  }
+  row = 0;
+  $("#team_image").css({"filter": "blur(10px"});
+  $("#num_tries").html("Tries 0 / 5");
 }
 
 function next_round(newData) {
-  $(document).ready(function() {
-    $('.input-dropdown').find("option").remove().end();
-    addOptions(newData);
-    $('.input-dropdown').prop("disabled", false);
-
-    answerIndex = Math.floor(Math.random() * newData.length);
-    answer = data[answerIndex];
-    
-    var tableBody = document.getElementById('table-body');
-    console.log(tableBody);
-    for (var i = row - 1; i > -1; i--) {
-      tableBody.removeChild(document.getElementById("tr" + i));
-    }
-    row = 0;
-    $("#team_image").css({"filter": "blur(10px"});
-    $("#num_tries").html("Tries 0 / 5");
+    reset(newData);
     $("#next_round_button").hide();
-  });
 }
 
 $(document).ready(function() {
-  // reset(data);
   next_round(data);
   $('#reset_button').click(function() {
     reset(data);
@@ -287,7 +284,7 @@ $(document).ready(function() {
 
   $('#copy_results_button').on('click', function() {
     navigator.clipboard.writeText(
-      getResults()
+      "I solved today's FRCdle in " + (row-1) + ' tries!\n\n' + getSquares() + '\nwebsitename'
     )
   });
 });
