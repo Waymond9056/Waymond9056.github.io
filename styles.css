@@ -344,7 +344,7 @@ th {
 }
 
 @media only screen and (max-width: 1000px) {
-    .popup {
+    .popup_content {
         width: 80%;
     }
 }
