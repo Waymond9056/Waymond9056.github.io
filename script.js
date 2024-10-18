@@ -4,6 +4,8 @@ let answer = data[answerIndex];
 let row = 0;
 let win_streak = 0;
 let won = false;
+let hardMode = false;
+let numGuesses = 5;
 
 function addTableRow(teamData) {
     const table = document.getElementById('data-table');
@@ -33,11 +35,15 @@ function addTableRow(teamData) {
     }
 
     team_number_cell.textContent = team_number;
-    if (team_number < answer.team_number) {
-      team_number_cell.textContent += " ↑";
-    } else if (team_number > answer.team_number) {
-      team_number_cell.textContent += " ↓";
+
+    if (!hardMode) {
+      if (team_number < answer.team_number) {
+        team_number_cell.textContent += " ↑";
+      } else if (team_number > answer.team_number) {
+        team_number_cell.textContent += " ↓";
+      }
     }
+
     newRow.appendChild(team_number_cell);
 
     const nickname = teamData[1];
@@ -81,11 +87,14 @@ function addTableRow(teamData) {
     }
 
     rookie_year_cell.textContent = rookie_year;
-    if (rookie_year < answer.rookie_year) {
-      rookie_year_cell.textContent += " ↑";
-    } else if (rookie_year > answer.rookie_year) {
-      rookie_year_cell.textContent += " ↓";
+    if (!hardMode) {
+      if (rookie_year < answer.rookie_year) {
+        rookie_year_cell.textContent += " ↑";
+      } else if (rookie_year > answer.rookie_year) {
+        rookie_year_cell.textContent += " ↓";
+      }
     }
+
     newRow.appendChild(rookie_year_cell);
 
     const number_of_awards = teamData[5];
@@ -97,13 +106,15 @@ function addTableRow(teamData) {
     } else {
       number_of_awards_cell.className = "tdwrong";
     }
-
     number_of_awards_cell.textContent = number_of_awards;
-    if (number_of_awards < answer.number_of_awards) {
-      number_of_awards_cell.textContent += " ↑";
-    } else if (number_of_awards > answer.number_of_awards) {
-      number_of_awards_cell.textContent += " ↓";
+    if (!hardMode) {
+      if (number_of_awards < answer.number_of_awards) {
+        number_of_awards_cell.textContent += " ↑";
+      } else if (number_of_awards > answer.number_of_awards) {
+        number_of_awards_cell.textContent += " ↓";
+      }
     }
+
     newRow.appendChild(number_of_awards_cell);
 
     const event_distance = parseFloat(teamData[6]);
@@ -117,11 +128,14 @@ function addTableRow(teamData) {
       event_distance_cell.className = "tdwrong";
     }
     event_distance_cell.textContent = teamData[6];
-    if (event_distance < guessed_distance) {
-      event_distance_cell.textContent += " ↑";
-    } else if (event_distance > guessed_distance) {
-      event_distance_cell.textContent += " ↓";
+    if (!hardMode) {
+      if (event_distance < guessed_distance) {
+        event_distance_cell.textContent += " ↑";
+      } else if (event_distance > guessed_distance) {
+        event_distance_cell.textContent += " ↓";
+      }
     }
+
     newRow.appendChild(event_distance_cell);
     tbody.appendChild(newRow);
 
@@ -135,12 +149,11 @@ function guessAttempted(id) {
 
   if (index == answerIndex) {
     winGame();
-  } else if (row == 4) {
+  } else if (row == numGuesses - 1) {
     loseGame();
   }
-
   $(".team_image").css({"filter": "blur(" + ((3 - row) * 2) + "px)"});
-  $(".num_tries").html("Tries " + (row + 1) + " / 5");
+  $(".num_tries").html("Tries " + (row + 1) + " / " + numGuesses);
 
   addTableRow(
       [
@@ -244,6 +257,10 @@ function getSquares() {
 }
 
 function reset(newData) {
+  //when the game is reset, check if the switch is switched to update hardMode boolean
+  hardMode = (document.getElementById("hard_mode_switch")).checked;
+  numGuesses = hardMode ? 4 : 5;
+
   $('.input-dropdown').find("option").remove().end();
   addOptions(newData);
   $('.input-dropdown').prop("disabled", false);
@@ -258,9 +275,14 @@ function reset(newData) {
     tableBody.removeChild(document.getElementById("tr" + i));
   }
   row = 0;
+
+  if (!hardMode) {
+    $(".team_image").css({"filter": "blur(10px"});
+    $(".num_tries").html("Tries 0 / 5");
+  } else {
+    $(".num_tries").html("Tries 0 / 4");
+  }
   $(".team_image").attr("src", "robots/" + answer.team_number + ".png");
-  $(".team_image").css({"filter": "blur(10px"});
-  $(".num_tries").html("Tries 0 / 5");
   $(".streak").html("Win Streak: " + win_streak +  " 🔥");
 }
 
@@ -270,6 +292,14 @@ function show_help_popup() {
     help_popup.classList.remove("show");
   })
 }
+
+function show_settings_popup() {
+  settings_popup.classList.add("show")
+  $('#close_settings_popup').click(function() {
+    settings_popup.classList.remove("show");
+  })
+}
+
 
 function next_round(newData) {
     reset(newData);
@@ -288,6 +318,10 @@ $(document).ready(function() {
 
   $('#help_button').click(function() {
     show_help_popup();
+  })
+
+  $('#settings_button').click(function() {
+    show_settings_popup();
   })
 
   $('.next_round_button').click(function() {
