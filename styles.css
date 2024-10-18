@@ -249,6 +249,8 @@ th {
 @media only screen and (max-width: 1000px) {
     #selector {
         width: 80%;
+        margin: auto;
+        clear: left;
     }
 }
 
