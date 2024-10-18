@@ -192,11 +192,10 @@ th {
     display: none;
 }
 
-@media only screen {
-    #mobile_image_text{display: block; width: 100%}     
+@media only screen and (orientation: portrait){
+    #mobile_image_text{display: block; width: 100%; margin: auto}     
     .desktop {display: none;}
 } 
-
 
 #team_image {
     width: 350px;
