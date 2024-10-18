@@ -3,6 +3,7 @@
     --r1: 154%;
     --r2: 68.5%;
     width: 7%;
+    height: 7%;
     aspect-ratio: 1;
     border-radius: 50%; 
     background:
@@ -182,10 +183,19 @@ th {
     margin-bottom: 20px;
   } */
 
-#image_text {
+#desktop_image_text {
     width: 40%;
     margin: auto;
 }
+
+#mobile_image_text {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #mobile_image_text{display: block; width: 100%; margin: auto}     
+    #desktop_image_text {display: none;}
+} 
 
 #team_image {
     width: 350px;
