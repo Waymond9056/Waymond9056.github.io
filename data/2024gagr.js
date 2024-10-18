@@ -371,12 +371,12 @@ var data = [
   },
   {
     "team_number": 9999,
-    "nickname": "Off-Season Demo Team 9999",
-    "city": "Manchester",
-    "state": "NH",
-    "rookie_year": 2017,
-    "school_name": "FIRST HQ",
-    "number_of_awards": 5,
-    "event_distance": "1,085 mi"
+    "nickname": "Off-Season Demo Team 9999 (Team BEAN 1833)",
+    "city": "Cumming",
+    "state": "GA",
+    "rookie_year": 2025,
+    "school_name": "Family/Community",
+    "number_of_awards": 0,
+    "event_distance": "84.7 mi"
   }
 ];

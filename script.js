@@ -146,14 +146,14 @@ function addTableRow(teamData) {
 
 function guessAttempted(id) {
   let index = id;
+  $(".team_image").css({"filter": "blur(" + ((3 - row) * 2) + "px)"});
+  $(".num_tries").html("Tries " + (row + 1) + " / " + numGuesses);
 
   if (index == answerIndex) {
     winGame();
   } else if (row == numGuesses - 1) {
     loseGame();
   }
-  $(".team_image").css({"filter": "blur(" + ((3 - row) * 2) + "px)"});
-  $(".num_tries").html("Tries " + (row + 1) + " / " + numGuesses);
 
   addTableRow(
       [
@@ -191,12 +191,17 @@ function winGame() {
       return answer.team_number + ' - ' + answer.nickname;
     }
   });
+  $(".team_image").css({"filter": "blur(0px)"});
 
   $("#share_popup_message").html("Congratulations!");
-  setTimeout(function() {
-    share_popup.classList.add("show")
+  if (!document.getElementById("remove_popup_switch").checked) {
+    setTimeout(function() {
+      share_popup.classList.add("show")
+      $(".next_round_button").show();
+    }, 1000);  
+  } else {
     $(".next_round_button").show();
-  }, 1000);
+  }
 
   $('#close_share_popup').click(function() {
     share_popup.classList.remove("show");
@@ -216,6 +221,8 @@ function loseGame() {
       return "Out of guesses...";
     }
   });
+  $(".team_image").css({"filter": "blur(0px)"});
+
   document.getElementById("share_popup_message").innerHTML = "The team was: " + answer.team_number + " - " + answer.nickname;
   setTimeout(function() {
     share_popup.classList.add("show")
@@ -261,6 +268,9 @@ function reset(newData) {
   hardMode = (document.getElementById("hard_mode_switch")).checked;
   numGuesses = hardMode ? 4 : 5;
 
+  $('#copy_results_button').html("Share");
+  $('#copy_results_button').css("background-color", "#04AA6D");
+
   $('.input-dropdown').find("option").remove().end();
   addOptions(newData);
   $('.input-dropdown').prop("disabled", false);
@@ -275,9 +285,9 @@ function reset(newData) {
     tableBody.removeChild(document.getElementById("tr" + i));
   }
   row = 0;
+  $(".team_image").css({"filter": "blur(10px"});
 
   if (!hardMode) {
-    $(".team_image").css({"filter": "blur(10px"});
     $(".num_tries").html("Tries 0 / 5");
   } else {
     $(".num_tries").html("Tries 0 / 4");
@@ -334,6 +344,8 @@ $(document).ready(function() {
   });
 
   $('#copy_results_button').on('click', function() {
+    $('#copy_results_button').html("Copied!");
+    $('#copy_results_button').css("background-color", "#038455");
     if (won) {
       navigator.clipboard.writeText(
         "I solved today's FRCdle in " + (row) + ' tries!\n\n' + getSquares() + '\n\nhttps://frcdle.github.io/'
