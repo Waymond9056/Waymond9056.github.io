@@ -52,7 +52,7 @@ const getEventDistance = async (data) => {
 
     writeFileSync(
         '../data/' + dataFile + '.js',
-        "const data = " + JSON.stringify(combinedData, null, 2) + ";"
+        "var data = " + JSON.stringify(combinedData, null, 2) + ";"
     );
 
     unlink('../data/' + dataFile + '.json', (err) => {

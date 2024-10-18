@@ -17,7 +17,7 @@ var data = [
     "rookie_year": 2003,
     "school_name": "Joseph Wheeler High School",
     "number_of_awards": 33,
-    "event_distance": "73.8 mi"
+    "event_distance": "72.8 mi"
   },
   {
     "team_number": 1261,
@@ -71,7 +71,7 @@ var data = [
   },
   {
     "team_number": 1746,
-    "nickname": "OTTO",
+    "nickname": "FC - Team OTTO",
     "city": "Cumming",
     "state": "Georgia",
     "rookie_year": 2006,
@@ -88,16 +88,6 @@ var data = [
     "school_name": "Family/Community & North Gwinnett High School",
     "number_of_awards": 43,
     "event_distance": "107 mi"
-  },
-  {
-    "team_number": 1833,
-    "nickname": "Team BEAN",
-    "city": "Cumming",
-    "state": "Georgia",
-    "rookie_year": 2006,
-    "school_name": "Family/Community",
-    "number_of_awards": 0,
-    "event_distance": "84.7 mi"
   },
   {
     "team_number": 2415,
@@ -120,16 +110,6 @@ var data = [
     "event_distance": "75.2 mi"
   },
   {
-    "team_number": 3318,
-    "nickname": "RoboDragons",
-    "city": "Lawrenceville",
-    "state": "Georgia",
-    "rookie_year": 2010,
-    "school_name": "Gwinnett Sch Math Sci & Tech",
-    "number_of_awards": 2,
-    "event_distance": "106 mi"
-  },
-  {
     "team_number": 3344,
     "nickname": "Space Dragons",
     "city": "Fayetteville",
@@ -137,7 +117,7 @@ var data = [
     "rookie_year": 2010,
     "school_name": "Whitewater High School",
     "number_of_awards": 5,
-    "event_distance": "117 mi"
+    "event_distance": "118 mi"
   },
   {
     "team_number": 3635,
@@ -197,7 +177,7 @@ var data = [
     "rookie_year": 2013,
     "school_name": "Powell High School & Gibbs High School & Halls High School",
     "number_of_awards": 16,
-    "event_distance": "127 mi"
+    "event_distance": "134 mi"
   },
   {
     "team_number": 5074,
@@ -220,16 +200,6 @@ var data = [
     "event_distance": "96.2 mi"
   },
   {
-    "team_number": 5219,
-    "nickname": "TeknoSquad",
-    "city": "Atlanta",
-    "state": "Georgia",
-    "rookie_year": 2014,
-    "school_name": "Future Seekers, Inc.",
-    "number_of_awards": 3,
-    "event_distance": "88.4 mi"
-  },
-  {
     "team_number": 5293,
     "nickname": "Metal Crusaders",
     "city": "Duluth",
@@ -237,7 +207,7 @@ var data = [
     "rookie_year": 2014,
     "school_name": "Duluth High School",
     "number_of_awards": 9,
-    "event_distance": "97.9 mi"
+    "event_distance": "98.4 mi"
   },
   {
     "team_number": 5608,
@@ -298,16 +268,6 @@ var data = [
     "school_name": "Alpharetta High School",
     "number_of_awards": 3,
     "event_distance": "95.8 mi"
-  },
-  {
-    "team_number": 6925,
-    "nickname": "W.A.Robotics",
-    "city": "College Park",
-    "state": "Georgia",
-    "rookie_year": 2018,
-    "school_name": "Woodward Academy",
-    "number_of_awards": 11,
-    "event_distance": "95.9 mi"
   },
   {
     "team_number": 7538,
@@ -377,7 +337,7 @@ var data = [
     "rookie_year": 2022,
     "school_name": "Statesboro High School & Southeast Bulloch High School & Statesboro STEAM Ccat Academy & Trinity Christian School & Bulloch Academy",
     "number_of_awards": 3,
-    "event_distance": "297 mi"
+    "event_distance": "299 mi"
   },
   {
     "team_number": 8866,
@@ -398,5 +358,25 @@ var data = [
     "school_name": "Flowery Branch High School",
     "number_of_awards": 3,
     "event_distance": "119 mi"
+  },
+  {
+    "team_number": 9998,
+    "nickname": "Off-Season Demo Team 9998",
+    "city": "Manchester",
+    "state": "NH",
+    "rookie_year": 2017,
+    "school_name": "FIRST HQ",
+    "number_of_awards": 3,
+    "event_distance": "1,085 mi"
+  },
+  {
+    "team_number": 9999,
+    "nickname": "Off-Season Demo Team 9999",
+    "city": "Manchester",
+    "state": "NH",
+    "rookie_year": 2017,
+    "school_name": "FIRST HQ",
+    "number_of_awards": 5,
+    "event_distance": "1,085 mi"
   }
 ];
