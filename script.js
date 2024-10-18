@@ -283,9 +283,15 @@ $(document).ready(function() {
   });
 
   $('#copy_results_button').on('click', function() {
-    navigator.clipboard.writeText(
-      "I solved today's FRCdle in " + (row-1) + ' tries!\n\n' + getSquares() + '\nwebsitename'
-    )
+    if (won) {
+      navigator.clipboard.writeText(
+        "I solved today's FRCdle in " + (row) + ' tries!\n' + getSquares() + '\n\nwebsitename'
+      );
+    } else {
+      navigator.clipboard.writeText(
+        "I failed today's FRCdle!\n" + getSquares() + '\n\nwebsitename'
+      );
+    }
   });
 });
 
