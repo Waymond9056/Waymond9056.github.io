@@ -182,7 +182,7 @@ function winGame() {
   $("#message").html("Congratulations!");
   setTimeout(function() {
     myPopup.classList.add("show")
-    $("#next_round_button").show();
+    $(".next_round_button").show();
   }, 1000);
 
   $('#closePopup').click(function() {
@@ -206,7 +206,7 @@ function loseGame() {
   document.getElementById("message").innerHTML = "The team was: " + answer.team_number + " - " + answer.nickname;
   setTimeout(function() {
     myPopup.classList.add("show")
-    $("#next_round_button").show();
+    $(".next_round_button").show();
   }, 1000);  
   
   $('#closePopup').click(function() {

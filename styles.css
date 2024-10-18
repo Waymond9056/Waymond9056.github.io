@@ -199,7 +199,7 @@ th {
 }
 
 @media only screen and (max-width: 1000px) {
-    #mobile_image_text{display: block; width: 100%; margin: auto; text-align: center;} 
+    #mobile_image_text{display: block; width: 100%; margin: none; text-align: center;} 
     #desktop_image_text {display: none;}
 } 
 
@@ -208,6 +208,7 @@ th {
     margin-bottom: 20px;
     float: left;
 }
+
 
 .event_tries {
     float: right;
@@ -243,6 +244,12 @@ th {
     width: 40%;
     margin: auto;
     clear: left;
+}
+
+@media only screen and (max-width: 1000px) {
+    #selector {
+        width: 80%;
+    }
 }
 
 .input-dropdown {
