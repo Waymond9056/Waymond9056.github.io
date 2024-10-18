@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> FRCdle </title>
         <link rel="stylesheet" href="styles.css">
-        <!-- verify that this works when pushed -->
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -18,11 +17,7 @@
     <body>
         <div class="title">
             <div id="water_loader"></div>
-
             <h1> FRCdle </h1>
-
-
-            <!-- <img src="images/favicon.ico" style="width:100px">  -->
             <button id="reset_button" >
                 <img id="reset_image" src="images/reset.png">
             </button>
@@ -44,27 +39,25 @@
             <button onclick="guessAttempted()">Guess</button>
         </div> -->
 
-
-            <div id="image_text">
-                <img id="team_image" src="robots/1771.png"> </img> 
-                <div id="event_tries">
-                    <h2> Event: GRITS </h2>
-                    <h3 id="num_tries">Tries 0 / 5</h3>
-                    <h3 id="streak"> Win Streak: 0 🔥 </h3>
-                    <button id="next_round_button">
-                        
-                    </button>
-                </div>
-                
+        <div id="image_text">
+            <img id="team_image" src="robots/1771.png"> </img> 
+            <div id="event_tries">
+                <h2> Event: GRITS </h2>
+                <h3 id="num_tries">Tries 0 / 5</h3>
+                <h3 id="streak"> Win Streak: 0 🔥 </h3>
+                <button id="next_round_button">
+                    
+                </button>
             </div>
-            <div id="selector"> 
-                <div class="input-dropdown">
-                    <select id="input">
-                    </select>
-                </div>
+            
+        </div>
+        <div id="selector"> 
+            <div class="input-dropdown">
+                <select id="input">
+                </select>
             </div>
+        </div>
         
-
         <div class="table-container">
             <table id="data-table">
               <thead>
@@ -82,9 +75,6 @@
               </tbody>
             </table>
           </div>
-        <p>
-        </p>
-
 
         <div id="myPopup" class="popup">
             <div class="popup-content">
@@ -99,7 +89,5 @@
                 </button>
             </div>
         </div>
-        
     </body>
-    
 </html>

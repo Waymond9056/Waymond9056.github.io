@@ -285,11 +285,11 @@ $(document).ready(function() {
   $('#copy_results_button').on('click', function() {
     if (won) {
       navigator.clipboard.writeText(
-        "I solved today's FRCdle in " + (row) + ' tries!\n' + getSquares() + '\n\nwebsitename'
+        "I solved today's FRCdle in " + (row) + ' tries!\n\n' + getSquares() + '\n\nhttps://frcdle.github.io/'
       );
     } else {
       navigator.clipboard.writeText(
-        "I failed today's FRCdle!\n" + getSquares() + '\n\nwebsitename'
+        "I failed today's FRCdle!\n\n" + getSquares() + '\n\nhttps://frcdle.github.io/'
       );
     }
   });
@@ -321,3 +321,4 @@ $(document).ready(function() {
 //       }
 //   }
 // );
+
