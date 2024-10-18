@@ -329,25 +329,34 @@ th {
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
-    border: 1px solid #888888;
-    width: 40%;
     font-family: Helvetica, Arial, sans-serif;
     line-height: 25px;
+    width: 40%;
 }
 
 #share_popup_content {
     text-align: center;
+    width: 20%;
 }
 
 #help_popup_content {
     text-align: left;
+    width: 40%;
 }
 
-/* @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
     .popup_content {
+        background-color: white;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+        border: 1px solid #888888;
         width: 80%;
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 25px;
     }
-} */
+}
 
 
 #copy_results_button {
