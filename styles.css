@@ -188,6 +188,16 @@ th {
     margin: auto;
 }
 
+#mobile_image_text {
+    display: none;
+}
+
+@media only screen {
+    #mobile_image_text{display: block; width: 100%}     
+    .desktop {display: none;}
+} 
+
+
 #team_image {
     width: 350px;
     margin-bottom: 20px;
