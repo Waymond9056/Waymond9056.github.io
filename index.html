@@ -94,17 +94,54 @@
             </table>
           </div>
 
-        <div id="myPopup" class="popup">
-            <div class="popup-content">
-                <button id="closePopup"> ✖ </button>
-                <!-- <div id="cube_loader"></div> -->
-                <h1 id="message">
+        <div id="share_popup" class="popup">
+            <div class="popup_content" id="share_popup-content">
+                <button class="close_popup" id="close_share_popup"> ✖ </button>
+                <h1 id="share_popup_message">
                     
                 </h1>
                 <p>Copy your results here:</p>
                 <button id="copy_results_button">
                     Share 
                 </button>
+            </div>
+        </div>
+
+        <div id="help_popup" class="popup">
+            <div class="popup_content" id="help_popup-content">
+                <button class="close_popup" id="close_help_popup"> ✖ </button>
+                <h1 id="help_popup_message">
+                    How to Play
+                </h1>
+
+                <p>
+                    <b>Guess the FRC team in 5 Tries.</b>
+                    <ul> 
+                        <li> Each option is an FRC team from the given selection. </li>
+                        <li> The colors of the tiles will change based on: </li>
+                        <ul> 
+                            <li>🟩 indicates a correct guess</li>
+                            <li>🟨 indicates a close guess (see specifications for which categories can be close) </li>
+                            <li>⬛ indicates a wrong guess</li>
+                        </ul>
+                    </ul>
+
+                    <b>Specifications</b>
+                    <ul> 
+                        <li>Team Number: 🟨 indicates answer is in same range as guess (0-999, 1000-1999, etc.)</li>
+                        <li>Rookie Year: 🟨 indicates answer is 1 year away from guess</li>
+                        <li>Number of Awards: 🟨 indicates answer is within 5 awards from guess</li>
+                        <li>Distance from GRITS: 🟨 indicates answer is 10 miles from guess </li>
+                    </ul>
+
+                   
+
+                     
+
+                    
+
+
+                </p>
             </div>
         </div>
     </body>

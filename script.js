@@ -179,14 +179,14 @@ function winGame() {
     }
   });
 
-  $("#message").html("Congratulations!");
+  $("#share_popup_message").html("Congratulations!");
   setTimeout(function() {
-    myPopup.classList.add("show")
+    share_popup.classList.add("show")
     $(".next_round_button").show();
   }, 1000);
 
-  $('#closePopup').click(function() {
-    myPopup.classList.remove("show");
+  $('#close_share_popup').click(function() {
+    share_popup.classList.remove("show");
   })
 
   won = true;
@@ -203,14 +203,14 @@ function loseGame() {
       return "Out of guesses...";
     }
   });
-  document.getElementById("message").innerHTML = "The team was: " + answer.team_number + " - " + answer.nickname;
+  document.getElementById("share_popup_message").innerHTML = "The team was: " + answer.team_number + " - " + answer.nickname;
   setTimeout(function() {
-    myPopup.classList.add("show")
+    share_popup.classList.add("show")
     $(".next_round_button").show();
   }, 1000);  
   
-  $('#closePopup').click(function() {
-    myPopup.classList.remove("show");
+  $('#close_share_popup').click(function() {
+    share_popup.classList.remove("show");
   })
 
   won = false;
@@ -264,6 +264,13 @@ function reset(newData) {
   $(".streak").html("Win Streak: " + win_streak +  " 🔥");
 }
 
+function show_help_popup() {
+  help_popup.classList.add("show")
+  $('#close_help_popup').click(function() {
+    help_popup.classList.remove("show");
+  })
+}
+
 function next_round(newData) {
     reset(newData);
     $(".next_round_button").hide();
@@ -277,6 +284,10 @@ $(document).ready(function() {
       win_streak = 0;
       reset(data);
     }
+  })
+
+  $('#help_button').click(function() {
+    show_help_popup();
   })
 
   $('.next_round_button').click(function() {
@@ -301,6 +312,8 @@ $(document).ready(function() {
   });
 });
 
+
+
 // $(document).ready(function() {
 
 // });
@@ -308,7 +321,7 @@ $(document).ready(function() {
 // myButton.addEventListener(
 //   "click",
 //   function () {
-//       myPopup.classList.add("show");
+//       share_popup.classList.add("show");
 //   }
 // );
 // closePopup.addEventListener(
@@ -320,8 +333,8 @@ $(document).ready(function() {
 // window.addEventListener(
 //   "click",
 //   function (event) {
-//       if (event.target == myPopup) {
-//           myPopup.classList.remove(
+//       if (event.target == share_popup) {
+//           share_popup.classList.remove(
 //               "show"
 //           );
 //       }

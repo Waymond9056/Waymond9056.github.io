@@ -298,7 +298,7 @@ th {
 
 }
 
-#closePopup {
+.close_popup {
     border: none;
     background-color: inherit;
     font-size: 25px;
@@ -306,7 +306,7 @@ th {
     float: right;
 }
 
-#closePopup:hover {background: #eee;}
+.close_popup:hover {background: #eee;}
 
 .popup {
     position: fixed;
@@ -323,17 +323,32 @@ th {
     display: none;
 }
 
-.popup-content {
+.popup_content {
     background-color: white;
-    margin: 10% auto;
-    padding: 20px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
     border: 1px solid #888888;
-    width: 300px;
-    font-weight: bolder;
+    width: 40%;
     font-family: Helvetica, Arial, sans-serif;
-    text-align: center;
-
+    line-height: 25px;
 }
+
+#share_popup_content {
+    text-align: center;
+}
+
+#help_popup_content {
+    text-align: left;
+}
+
+@media only screen and (max-width: 1000px) {
+    .popup {
+        width: 80%;
+    }
+}
+
 
 #copy_results_button {
     background-color: #04AA6D;
