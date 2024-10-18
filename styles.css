@@ -2,7 +2,7 @@
     margin-right: 10px;
     --r1: 154%;
     --r2: 68.5%;
-    width: 60px;
+    width: 7%;
     aspect-ratio: 1;
     border-radius: 50%; 
     background:
@@ -188,7 +188,7 @@ th {
 }
 
 #team_image {
-    width: 350px;
+    width: 60%;
     margin-bottom: 20px;
     float: left;
 }
