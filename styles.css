@@ -188,7 +188,7 @@ th {
 }
 
 #team_image {
-    width: 60%;
+    width: 350px;
     margin-bottom: 20px;
     float: left;
 }
@@ -297,7 +297,7 @@ th {
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888888;
-    width: 30%;
+    width: 300px;
     font-weight: bolder;
     font-family: Helvetica, Arial, sans-serif;
     text-align: center;
