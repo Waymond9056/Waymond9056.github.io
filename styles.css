@@ -194,7 +194,7 @@ th {
 }
 
 @media only screen and (max-width: 1000px) {
-    #mobile_image_text{display: block; width: 100%; margin: auto}     
+    #mobile_image_text{display: block; width: 100%; margin: auto; text-align: center;}     
     #desktop_image_text {display: none;}
 } 
 
