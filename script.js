@@ -258,8 +258,10 @@ function reset(newData) {
     tableBody.removeChild(document.getElementById("tr" + i));
   }
   row = 0;
+  $("#team_image").attr("src", answer.team_number + ".png");
   $("#team_image").css({"filter": "blur(10px"});
   $("#num_tries").html("Tries 0 / 5");
+  $("#streak").html("Win Streak: " + win_streak +  " 🔥");
 }
 
 function next_round(newData) {
@@ -269,8 +271,12 @@ function next_round(newData) {
 
 $(document).ready(function() {
   next_round(data);
+
   $('#reset_button').click(function() {
-    reset(data);
+    if (window.confirm("Are you sure? This will reset the current game and win streak.")) {
+      win_streak = 0;
+      reset(data);
+    }
   })
 
   $('#next_round_button').click(function() {
