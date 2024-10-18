@@ -219,7 +219,7 @@ th {
 
 @media only screen and (max-width: 1000px) {
     .event_tries {
-        float: center;
+        float: none;
     }
 }
 
@@ -250,7 +250,7 @@ th {
     #selector {
         width: 80%;
         margin: auto;
-        clear: left;
+        clear: none;
     }
 }
 
