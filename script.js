@@ -243,7 +243,6 @@ function getSquares() {
   var tableBody = document.getElementById('table-body'); 
   var cells = tableBody.getElementsByTagName('td');
   var text = '';
-  console.log(cells);
 
   for (var i = 0; i < cells.length; i++) {
 
@@ -277,10 +276,8 @@ function reset(newData) {
 
   answerIndex = Math.floor(Math.random() * newData.length);
   answer = data[answerIndex];
-  console.log(answer.team_number);
   
   var tableBody = document.getElementById('table-body');
-  console.log(tableBody);
   for (var i = row - 1; i > -1; i--) {
     tableBody.removeChild(document.getElementById("tr" + i));
   }
