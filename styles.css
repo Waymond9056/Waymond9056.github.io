@@ -186,6 +186,7 @@ th {
 #desktop_image_text {
     width: 40%;
     margin: auto;
+    display: block;
 }
 
 #mobile_image_text {
@@ -197,20 +198,20 @@ th {
     #desktop_image_text {display: none;}
 } 
 
-#team_image {
+.team_image {
     width: 350px;
     margin-bottom: 20px;
     float: left;
 }
 
-#event_tries {
+.event_tries {
     float: right;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
     text-align: center;
 }
 
-#next_round_button {
+.next_round_button {
     background-color: #04AA6D;
     border: none;
     color: white;
@@ -223,7 +224,7 @@ th {
     border-radius: 12px;
 }
 
-#next_round_button:hover {
+.next_round_button:hover {
     background-color: #038958;
 }
 

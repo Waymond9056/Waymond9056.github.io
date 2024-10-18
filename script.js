@@ -139,8 +139,8 @@ function guessAttempted(id) {
     loseGame();
   }
 
-  $("#team_image").css({"filter": "blur(" + ((3 - row) * 2) + "px)"});
-  $("#num_tries").html("Tries " + (row + 1) + " / 5");
+  $(".team_image").css({"filter": "blur(" + ((3 - row) * 2) + "px)"});
+  $(".num_tries").html("Tries " + (row + 1) + " / 5");
 
   addTableRow(
       [
@@ -191,8 +191,8 @@ function winGame() {
 
   won = true;
   win_streak++;
-  $("#next_round_button").html("Next Round");
-  $("#streak").html("Win Streak: " + win_streak +  " 🔥");
+  $(".next_round_button").html("Next Round");
+  $(".streak").html("Win Streak: " + win_streak +  " 🔥");
 
 }
 
@@ -215,8 +215,8 @@ function loseGame() {
 
   won = false;
   win_streak = 0;
-  $("#next_round_button").html("Retry");
-  $("#streak").html("Win Streak: " + win_streak +  " 🔥");
+  $(".next_round_button").html("Retry");
+  $(".streak").html("Win Streak: " + win_streak +  " 🔥");
 }
 
 function getSquares() {
@@ -258,15 +258,15 @@ function reset(newData) {
     tableBody.removeChild(document.getElementById("tr" + i));
   }
   row = 0;
-  $("#team_image").attr("src", answer.team_number + ".png");
-  $("#team_image").css({"filter": "blur(10px"});
-  $("#num_tries").html("Tries 0 / 5");
-  $("#streak").html("Win Streak: " + win_streak +  " 🔥");
+  $(".team_image").attr("src", "robots/" + answer.team_number + ".png");
+  $(".team_image").css({"filter": "blur(10px"});
+  $(".num_tries").html("Tries 0 / 5");
+  $(".streak").html("Win Streak: " + win_streak +  " 🔥");
 }
 
 function next_round(newData) {
     reset(newData);
-    $("#next_round_button").hide();
+    $(".next_round_button").hide();
 }
 
 $(document).ready(function() {
@@ -279,7 +279,7 @@ $(document).ready(function() {
     }
   })
 
-  $('#next_round_button').click(function() {
+  $('.next_round_button').click(function() {
     next_round(data);
   })
 
