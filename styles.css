@@ -331,7 +331,6 @@ th {
     padding: 30px;
     font-family: Helvetica, Arial, sans-serif;
     line-height: 25px;
-    width: 40%;
 }
 
 #share_popup_content {
@@ -352,9 +351,18 @@ th {
         margin-right: auto;
         padding: 30px;
         border: 1px solid #888888;
-        width: 80%;
         font-family: Helvetica, Arial, sans-serif;
         line-height: 25px;
+    }
+
+    #share_popup_content {
+        text-align: center;
+        width: 80%;
+    }
+    
+    #help_popup_content {
+        text-align: left;
+        width: 80%;
     }
 }
 
