@@ -183,7 +183,7 @@ th {
     margin-bottom: 20px;
   } */
 
-#image_text {
+#desktop_image_text {
     width: 40%;
     margin: auto;
 }
@@ -194,7 +194,7 @@ th {
 
 @media only screen and (orientation: portrait){
     #mobile_image_text{display: block; width: 100%; margin: auto}     
-    .desktop {display: none;}
+    #desktop_image_text {display: none;}
 } 
 
 #team_image {
